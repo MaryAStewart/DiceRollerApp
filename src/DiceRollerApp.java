@@ -84,17 +84,21 @@ public class DiceRollerApp {
 			System.out.println(dice.getValue1());
 			System.out.println(dice.getValue2());
 			
-			if(dice.getSum()==7)
-			System.out.println("Craps!");
-			if(dice.getValue1()==1 && dice.getValue2()==1)
-				System.out.println("Snake Eyes!");
-			if(dice.getValue1()==6 && dice.getValue2()==6)
-				System.out.println("Box Car!");
-			
+			namedRollResults(dice);
 			
 			choice = ooval.getChoiceString("Roll again? (y/n)", "y", "n");			
 					
 		}
+		
+	}
+	public static void namedRollResults(PairOfDice dice){
+		if(dice.getSum()==7)
+			System.out.println("Craps!");
+		if(dice.getValue1()==1 && dice.getValue2()==1)
+			System.out.println("Snake Eyes!");
+		if(dice.getValue1()==6 && dice.getValue2()==6)
+			System.out.println("Box Car!");
+		
 	}
 
 	
